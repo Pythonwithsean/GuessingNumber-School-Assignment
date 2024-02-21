@@ -54,7 +54,7 @@ main > h1{
 
 .Game-Section{ 
     display: none;
-    border: 2px solid white;
+    
 }
 
 
@@ -67,6 +67,49 @@ main > h1{
     justify-content: center;
     align-items: center;
 
+}
+
+.game-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    gap:  0 70px;
+}
+
+.ERROR{
+    color: red;
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+.game-wrapper > input[type="text"]{
+    width: 200px;
+    background-color: #fff;
+    border: none;
+    height: 30px;
+    font-weight: 600;
+}
+.game-wrapper > input[type="button"]::placeholder{
+    color:#000;
+    font-weight: 400;
+}
+
+.game-wrapper > input[type="button"]{
+    background-color: black;
+    outline: none;
+    border: none;
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    box-shadow: 2px 2px 3px 0 #000;
+    transition: all 0.6s ease-in-out ;
+}
+
+.game-wrapper > input[type="button"]:hover{
+    background-color: #0000004d;
+    transform: translateY(-10px);
 }
 
 
