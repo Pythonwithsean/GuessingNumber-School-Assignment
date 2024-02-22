@@ -117,12 +117,14 @@ main > h1{
     position: fixed;
     top:0;
     left: 0;
+    cursor: pointer;
 }
 .ending{
     position: fixed;
     bottom: 0;
     right: 0;
     padding-right: 10px;
+    cursor: pointer;
 }
 
 
