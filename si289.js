@@ -55,16 +55,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const input = document.querySelector("#randnumInput");
   checkerbtn.addEventListener("click", () => {
-    guesses.push(input.value);
-    console.log(guesses);
 
     if (Number.parseInt(lifes) === 0) {
       AlertBox.style.display = "block";
+      setTimeout(()=> { 
+          location.reload()
+      },5000)
     } else {
+      guesses.push(input.value);
       if (Number.parseInt(input.value) === Number.parseInt(rand)) {
         Alert = document.createElement("h1");
         Alert.classList.add("CORRECT");
         Alert.innerHTML = "Correct";
+        setTimeout(() => { 
+          location.reload();
+        },2000)
       } else if (Number.parseInt(input.value) !== Number.parseInt(rand)) {
         lifes -= 1;
         if (isNaN(Number.parseInt(Number.parseInt(input.value)))) {
@@ -79,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 1000);
           }
         }
+        
         if (!Alert) {
           Alert = document.createElement("h5");
           Alert.classList.add("ERROR");
