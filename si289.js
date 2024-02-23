@@ -10,6 +10,7 @@ let guesses = [];
 let game_active = true;
 let checkerbtn;
 let AlertBox;
+let gap = 0 
 
 document.addEventListener("DOMContentLoaded", () => {
   lifeElm = document.querySelector(".lifes");
@@ -63,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },5000)
     } else {
       guesses.push(input.value);
+      console.log(guesses)
       if (Number.parseInt(input.value) === Number.parseInt(rand)) {
         Alert = document.createElement("h1");
         Alert.classList.add("CORRECT");
@@ -87,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         if (!Alert) {
           Alert = document.createElement("h5");
-          Alert.classList.add("ERROR");
+          Alert.classList.add("WRONG");
           Alert.innerHTML = "Wrong Number";
           input.value = "";
           setTimeout(() => {
