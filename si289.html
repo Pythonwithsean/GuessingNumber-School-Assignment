@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./si289.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./si289.css" />
     <title>Guess the Number</title>
-</head>
+  </head>
 
-
-<body>
+  <body>
     <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none'; location.reload()">&times;</span>
-        GAME OVER YOU LOST
-      </div>
+      <span
+        class="closebtn"
+        onclick="this.parentElement.style.display='none'; location.reload()"
+        >&times;</span
+      >
+      GAME OVER YOU LOST
+    </div>
     <h1 class="start">&lt;Sean&gt;</h1>
+
     <main>
-        <h1>Guess the Number Game</h1>
-        <section class="instruction-wrapper">
-            <h3>Select a  range of numbers</h3>
-            <div class="options"><input type="radio" name="10" id="10option" value="10"><span>10</span><input type="radio" name="100" id="100option" value="100"><span>100</span><input type="radio" name="1000" id="1000option" value="1000"><span>1000</span></div>
-            <button type="submit" id="submitBtn">Submit</button>
-        </section>
-        <section class="Game-Section"> 
-            <h3>Enter a number </h3>
-            <div class="game-wrapper">
-            <input type="text" name="randomNumInput" id="randnumInput" placeholder="Enter Random Number">
-            <input type="button" value="Check" id="checkBtn">
+      <h1>Guess the Number Game</h1>
+      <section class="instruction-wrapper">
+        <h3>Select a range of numbers</h3>
+        <div class="options">
+          <input type="radio" name="10" id="10option" value="10" /><span
+            >10</span
+          ><input type="radio" name="100" id="100option" value="100" /><span
+            >100</span
+          ><input type="radio" name="1000" id="1000option" value="1000" /><span
+            >1000</span
+          >
         </div>
-        <br>
-        <h3 class="lifes">Number of Guesses </h3>
-        </section>
+        <button type="submit" id="submitBtn">Submit</button>
+      </section>
+      <section class="Game-Section">
+        <h3>Enter a number</h3>
+        <div class="game-wrapper">
+          <input
+            type="text"
+            name="randomNumInput"
+            id="randnumInput"
+            placeholder="Enter Random Number"
+          />
+          <input type="button" value="Check" id="checkBtn" />
+        </div>
+        <br />
+        <h3 class="lifes">Number of Guesses</h3>
+        <ul class="list-of-guesses">
+            <h3 guessingHeading>Guessing Records</h3>
+          </ul>
+        
+      </section>
     </main>
     <footer>
-        <h1 class="ending">&lt;&sol;Pythonwithsean&gt;</h1>
+      <h1 class="ending">&lt;&sol;Pythonwithsean&gt;</h1>
     </footer>
     <script src="./si289.js" defer></script>
-</body>
+  </body>
 </html>
