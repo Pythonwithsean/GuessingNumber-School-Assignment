@@ -1,287 +1,266 @@
-*{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: "Fira Code", monospace;
-    font-optical-sizing: auto;
-    font-style: italic;
-    }
-
-
-body{
-    background-color: #22272d;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-style: italic;
 }
 
+body {
+  background-color: #22272d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-h1,h3{
-    color: #fff;
+  width: 100%;
+  height: 100vh;
 }
 
-
-
-h1{
-    
-    padding: 2px 0px 2px 5px;
+h1,
+h3 {
+  color: #fff;
 }
 
-main{
-    width: 900px;
-    margin: 0 auto;
-    
-
+h1 {
+  padding: 2px 0px 2px 5px;
 }
 
-
-
-main > h1{
-    text-align: center;
+main {
+  width: 900px;
+  margin: 0 auto 0 auto;
 }
 
-
-.instruction-wrapper, .Game-Section{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+main > h1 {
+  text-align: center;
 }
 
-
-
-
-
-.instruction-wrapper h3,.Game-Section h3{
-    display: block;
-    position: relative;
-    text-align: center;
+.instruction-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.Game-Section{ 
-    display: none;
-  
-
-    
+.instruction-wrapper h3,
+.Game-Section h3 {
+  position: relative;
+  text-align: center;
 }
 
-
-.options{
-    display: flex;
-    flex-direction: row;
-    display: block;
-    position: relative;
-    margin: 10px;
-    justify-content: center;
-    align-items: center;
-
+.Game-Section {
+  display: none;
 }
 
-.game-wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 20px;
-    gap:  0 70px;
-
-        
+.options {
+  display: flex;
+  flex-direction: row;
+  display: block;
+  position: relative;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-
-ul{
-    
-    list-style-type: decimal;
-    list-style-position: inside;
-    border: 5px solid black;
-    background-color: #fff;
-    display: flex;
-    flex-wrap: wrap;
-  
-    flex-direction: column;
-
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    width: 400px;
-    margin-top:40px;
-   margin-bottom: -20px;
-
-
+.game-wrapper {
+  display: flex;
+  width: 50%;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  gap: 20px 0;
+  justify-content: center;
 }
 
-ul > h3{
-    color: black;
+ul {
+  list-style-type: decimal;
+  list-style-position: inside;
+  border: 5px solid black;
+  background-color: #fff;
 
+  /* display: flex;
+  flex-wrap: wrap;
+
+  flex-direction: column; */
+
+  /* position: relative;
+  left: 100%;
+  top: 35%;
+  transform: translateX(-135%); */
+
+  /* width: 400px;
+  margin-top: 40px;
+  margin-bottom: -20px; */
 }
 
-
-ul  li{
-    color: color;
-    font-size: 18px;
-    padding: 2px 2px;
-    font-weight: 700;
+ul > h3 {
+  color: black;
 }
 
-
-.ERROR{
-    color: red;
-    text-align: center;
-    font-size: 20px;
-    
+ul li {
+  color: color;
+  font-size: 18px;
+  padding: 2px 2px;
+  font-weight: 700;
 }
 
-.WRONG{
-    color: rgb(235, 235, 108);
-    text-align: center;
-    font-size: 20px;
+.ERROR {
+  color: red;
+  text-align: center;
+  font-size: 20px;
 }
 
-.CORRECT{
-    color: greenyellow;
-    text-align: center;
-    font-size: 20px;
+.WRONG {
+  color: rgb(235, 235, 108);
+  text-align: center;
+  font-size: 20px;
 }
 
-.game-wrapper > input[type="text"]{
-    width: 200px;
-    background-color: #fff;
-    border: none;
-    height: 30px;
-    font-weight: 600;
-}
-.game-wrapper > input[type="button"]::placeholder{
-    color:#000;
-    font-weight: 400;
+.CORRECT {
+  color: greenyellow;
+  text-align: center;
+  font-size: 20px;
 }
 
-.game-wrapper > input[type="button"]{
-    background-color: black;
-    outline: none;
-    border: none;
-    width: 100px;
-    height: 30px;
-    color: #fff;
-    box-shadow: 2px 2px 3px 0 #000;
-    transition: all 0.6s ease-in-out ;
+div > input[type="text"] {
+  width: 200px;
+  background-color: #fff;
+  border: none;
+  height: 30px;
+  display: inline;
+  font-weight: 600;
+}
+div > input[type="button"]::placeholder {
+  color: #000;
+  font-weight: 400;
 }
 
-.game-wrapper > input[type="button"]:hover{
-    background-color: #0000004d;
-    transform: translateY(-10px);
+.guess_container {
+  display: flex;
+  width: 50%;
+  margin-top: 20px;
+  flex-direction: column;
+
+  gap: 20px 0;
+  justify-content: center;
+}
+.list-of-guesses {
+  position: relative;
+}
+
+div > input[type="button"] {
+  background-color: black;
+  outline: none;
+  display: inline;
+  border: none;
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  box-shadow: 2px 2px 3px 0 #000;
+  transition: all 0.6s ease-in-out;
+}
+
+.game-wrapper > input[type="button"]:hover {
+  background-color: #0000004d;
+  transform: translateY(-10px);
 }
 
 .alert {
-    padding: 20px;
-    background-color: #f44336; 
-    color: white;
-    width: 800px;
-    margin-bottom: 15px;
-    position: absolute;
-    display: none;
-    top: 0;
-    left: calc(100% / 2);
-    transform: translateX(-50%);
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  width: 800px;
+  margin-bottom: 15px;
+  position: absolute;
+  display: none;
+  top: 0;
+  left: calc(100% / 2);
+  transform: translateX(-50%);
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.start {
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.ending {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.options > input {
+  width: 20px;
+  height: 16px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border: 1px solid #fff;
+
+  border: 2px solid #000;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: black;
+  border: none;
+  box-shadow: 2px 2px 0 0 black;
+  color: #fff;
+  display: none;
+  padding: 5px;
+  outline: none;
+}
+
+.list-of-guess-section {
+  border: 2px solid white;
+  position: absolute;
+  top: 0;
+}
+
+.options > input:checked {
+  accent-color: red;
+}
+
+.options > span {
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  main {
+    max-width: 200px;
+    flex-wrap: wrap;
+    padding: 0 10px;
   }
-  
-
-  .closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
+  main h1 {
+    font-size: 17px;
   }
-  
-
-  .closebtn:hover {
-    color: black;
+  main h2 {
+    font-size: 16px;
   }
-
-
-.start{
-    position: fixed;
-    top:0;
-    left: 0;
-    cursor: pointer;
-}
-.ending{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    padding-right: 10px;
-    cursor: pointer;
 }
 
-
-
-.options > input{
-    width: 20px;
-    height: 16px;
-    padding-left: 2px;
-    padding-right: 2px;
-    border: 1px solid #fff;
-   
-    border: 2px solid #000;
-    outline: none;
-    
-}
-
-
-button[type ="submit"]{
-    background-color: black;
-    border: none;
-    box-shadow: 2px 2px 0 0 black;
-    color:#fff;
-    display: none;
-    padding: 5px;
-    outline: none;
-}
-
-
-.list-of-guess-section{
-    border: 2px solid white;
-    position: absolute;
-    top: 0;
-}
-
-
-.options > input:checked{
-    accent-color:  red;
-}
-
-.options > span { 
-    margin-left: 4px;
-    margin-right: 4px;
-    color: #fff ;
-
-}
-
-
-
-
-@media only screen and (max-width: 480px){
-    main{ 
-        max-width: 200px;
-        flex-wrap: wrap;
-        padding: 0 10px;
-    }
-    main h1 { 
-        font-size: 17px;
-    }
-    main h2{
-        font-size: 16px;
-    }
-    
-}
-
-@media only screen and (max-width: 979px){
-    main{
-        width: 500px;
-    }
+@media only screen and (max-width: 979px) {
+  main {
+    width: 500px;
+  }
 }

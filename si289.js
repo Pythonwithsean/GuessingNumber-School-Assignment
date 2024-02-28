@@ -4,19 +4,18 @@ let rand;
 let max;
 let Alert;
 let Wrong;
-let lifes;    
+let lifes;
 let lifeElm;
 let guesses = [];
 let game_active = true;
 let checkerbtn;
 let AlertBox;
-let gap = 0 
-let listOfGuesses
-k
+let gap = 0;
+let listOfGuesses;
 document.addEventListener("DOMContentLoaded", () => {
   lifeElm = document.querySelector(".lifes");
   AlertBox = document.querySelector(".alert");
-  listOfGuesses = document.querySelector(".list-of-guesses")
+  listOfGuesses = document.querySelector(".list-of-guesses");
   const submitBtn = document.getElementById("submitBtn");
   const buttons = document.getElementsByTagName("input");
   checkerbtn = document.querySelector("#checkBtn");
@@ -50,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const game = document.querySelector(".Game-Section");
     console.log(guesses);
-    game.style.display = "block";
+    game.style.display = "flex";
     lifeElm.textContent += ` is ${lifes}`;
     const heading = document.querySelector(".Game-Section h3");
     heading.innerHTML += ` Between ${max - max + 1} and ${max}`;
@@ -59,27 +58,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.querySelector("#randnumInput");
   checkerbtn.addEventListener("click", () => {
     guesses.push(input.value);
-    const guessElement = document.createElement("li")
-    
-    guessElement.innerHTML = guesses[guesses.length - 1]
-    if(!isNaN(input.value) && lifes !== 0 ) listOfGuesses.append(guessElement)
-   
-    document.createElement("li")
+    const guessElement = document.createElement("li");
+
+    guessElement.innerHTML = guesses[guesses.length - 1];
+    if (!isNaN(input.value) && lifes !== 0) listOfGuesses.append(guessElement);
+
+    document.createElement("li");
     if (Number.parseInt(lifes) <= 0) {
       checkerbtn.style.display = "none";
       AlertBox.style.display = "block";
-      setTimeout(()=> { 
-          location.reload()
-      },5000)
+      setTimeout(() => {
+        location.reload();
+      }, 5000);
     } else {
-  
       if (Number.parseInt(input.value) === Number.parseInt(rand)) {
         Alert = document.createElement("h1");
         Alert.classList.add("CORRECT");
         Alert.innerHTML = "Correct Well Done!! Game Will Restart in 3 Seconds";
-        setTimeout(() => { 
+        setTimeout(() => {
           location.reload();
-        },3000)
+        }, 3000);
       } else if (Number.parseInt(input.value) !== Number.parseInt(rand)) {
         lifes -= 1;
         if (isNaN(Number.parseInt(Number.parseInt(input.value)))) {
@@ -93,8 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
               Alert = undefined;
             }, 1000);
           }
-        }
-        else if(Number.parseInt(input.value) > Number.parseInt(rand)){
+        } else if (Number.parseInt(input.value) > Number.parseInt(rand)) {
           if (!Alert) {
             Alert = document.createElement("h5");
             Alert.classList.add("WRONG");
@@ -105,8 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
               Alert = undefined;
             }, 1000);
           }
-        }
-        else if(Number.parseInt(input.value) < Number.parseInt(rand)){
+        } else if (Number.parseInt(input.value) < Number.parseInt(rand)) {
           if (!Alert) {
             Alert = document.createElement("h5");
             Alert.classList.add("WRONG");
@@ -118,11 +114,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 1000);
           }
         }
-        
       }
 
       lifeElm.textContent = ` Number of Guesses is ${lifes}`;
-      if (Alert) document.body.append(Alert)
+      if (Alert) document.body.append(Alert);
     }
   });
 });

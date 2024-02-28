@@ -1,35 +1,21 @@
-if (input.value === "" || isNaN(input.value) || input.value === " ") {
-      lifeElm.textContent = ` Number of Guesses is ${lifes - 1}`
-      if (!Alert) {
-        Alert = document.createElement("h5");
-        Alert.classList.add("ERROR");
-        Alert.innerHTML = "You need to Enter a Number";
-        lifes -= 1
-        lifeElm.textContent = ` Number of Guesses is ${lifes}`
-        console.log(lifes)
-        document.body.append(Alert);
-        if (Alert) {
-          setTimeout(() => {
-            document.body.removeChild(Alert);
-            Alert = undefined;
-          }, 1000);
-        }
-        input.value = "";
-      }
-    } 
-   if (Number.parseInt(input.value) !== rand) {
-      lifeElm.textContent = ` Number of Guesses is ${lifes - 1}`
-      if (!Wrong) {
-        Wrong = document.createElement("h5");
-        Wrong.classList.add("ERROR");
-        Wrong.innerHTML = "Wrong Number! Try Again....";
-        document.body.append(Wrong);
-        if (Wrong) {
-          setTimeout(() => {
-            document.body.removeChild(Wrong);
-            Wrong = undefined;
-          }, 1000);
-        }
-      }
-      input.value = "";
-    }
+ <div class="game-container">
+          <div class="game-wrapper">
+            <h3>Enter a number</h3>
+            <input
+              type="text"
+              name="randomNumInput"
+              id="randnumInput"
+              placeholder="Enter Random Number"
+            />
+            <input type="button" value="Check" id="checkBtn" />
+            <h3 class="lifes">Number of Guesses</h3>
+          </div>
+    
+        </div>
+
+        <div class="list-of-guesses-container">
+          <span class="list-of-guesses">
+            <h3 guessingHeading>Guessing Records</h3>
+          </span>
+        </div>
+      </section>
