@@ -158,12 +158,12 @@ div > input[type="button"] {
   height: 30px;
   color: #fff;
   box-shadow: 2px 2px 3px 0 #000;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.game-wrapper > input[type="button"]:hover {
-  background-color: #0000004d;
-  transform: translateY(-10px);
+.game-wrapper div > input[type="button"]:hover {
+  background-color: #0000007a;
+  transform: translateY(-5px);
 }
 
 .alert {
@@ -247,9 +247,7 @@ button[type="submit"] {
 
 @media only screen and (max-width: 480px) {
   main {
-    max-width: 200px;
-    flex-wrap: wrap;
-    padding: 0 10px;
+    max-width: 300px;
   }
   main h1 {
     font-size: 17px;
@@ -257,10 +255,36 @@ button[type="submit"] {
   main h2 {
     font-size: 16px;
   }
+  .instruction-wrapper {
+    margin: 0 auto;
+  }
+
+  .Game-Section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .game-wrapper {
+    width: 250px;
+  }
+
+  .game-wrapper div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media only screen and (max-width: 979px) {
   main {
     width: 500px;
+  }
+
+  .game-wrapper div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 }
